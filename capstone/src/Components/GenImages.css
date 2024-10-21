@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.options{
+    display: flex;
+  justify-content: space-between; /* This creates space between the two sides */
+  width: 100%;
+  }
+
+  /* Style for the left-side with 2 inputs */
+  .left-side {
+  display: flex;
+  flex-direction: column; /* Stack the inputs vertically */
+  flex: 1; /* Take up equal width */
+  margin-right: 10px;
+  margin-left: 50px;
+  }
+  
+  /* Style for the right-side with 3 inputs */
+  .right-side {
+  display: flex;
+  flex-direction: column; /* Stack the inputs vertically */
+  flex: 1; /* Take up equal width */
+  margin-right: 10px;
+  margin-left: 10px;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;  /* Align label and select vertically */
+    margin-bottom: 15px;
+  }
+  
+  label {
+    width: 150px; /* Fixed width for labels */
+    font-size: 16px;
+    margin-right: 0px; /* Space between label and select */
+  }
+  
+  select {
+    width: 250px; /* Specific width for select fields */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input {
+    width: 233px; /* Specific width for input fields */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .vertical {
+    border-left: 1px solid black;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.design-text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .design{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: left;
+    margin-left: 45px;
+  }

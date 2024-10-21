@@ -2,6 +2,7 @@ import React, { Component, useContext, useRef } from "react";
 import { Button, Container } from 'reactstrap';
 import { useNavigate } from "react-router-dom";
 import Header from './Header.js';
+import "./StartPage.css";
 
 // Import images using require.context
 const images = require.context('../images', true);
