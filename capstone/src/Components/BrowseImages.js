@@ -1,46 +1,46 @@
-import React, { Component, useContext, useRef } from "react";
-import { Button, Container } from 'reactstrap';
+import React from "react";
+import Header from "./Header";
 import { useNavigate } from "react-router-dom";
-import Header from './Header.js';
-import "./StartPage.css";
-import { FaPlus } from "react-icons/fa6";
+import "./BrowseImages.css";
+import { GoTriangleLeft } from "react-icons/go";
+import { FiRotateCcw } from "react-icons/fi";
 import { FaRegCircle } from "react-icons/fa";
 
-// Import images using require.context
 const images = require.context('../images', true);
 const imageList = images.keys().map(image => images(image)); // Map image paths
 
 
 
-
-function StartPage() {
+function BrowsePage() {
 
     let navigate = useNavigate(); 
     const routeChange = () => { 
-        let path = `/genImages`;  // Ensure the path matches the route defined in App.js
-        navigate(path);
-    }
-
+    let path = `/genImages`;  // Ensure the path matches the route defined in App.js
+    navigate(path);
+}
 
     return (
         <div>
-        <Header />
-        <div className="grid">
+            <Header />
+            <button className="go-back-button" onClick={routeChange}>
+            <GoTriangleLeft color="white" fontSize={25}/>
+                Go back
+            </button>
+
+            <div className="grid">
             {imageList.map((image, index) => (
                 // Some Webpack configurations require .default, some don't. Try without first.
                 <img key={index} src={image.default || image} alt={`image-${index}`} className="grid-item" />
             ))}
         </div>
 
-
-          <button color="primary" className="start-button"
-            onClick={routeChange}>
+        <button color="primary" className="gen-again-button">
                 <FaRegCircle className="circle-icon"/>
-              <FaPlus className="plus-icon"/>
+                <FiRotateCcw className="rotate-icon"/>
             </button>
-      
+
         </div>
     );
 }
 
-export default StartPage;
+export default BrowsePage;

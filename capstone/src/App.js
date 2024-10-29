@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/Header.js';
 import StartPage from './Components/StartPage.js'
 import GenImages from './Components/GenImages.js'; // This is the new page you'll navigate to
+import BrowseImages from './Components/BrowseImages.js'
 import { Button, Container } from 'reactstrap';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -14,7 +15,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<StartPage />} />
-        <Route path="/genImages" element={<GenImages />} /> 
+        <Route path="/genImages" element={<GenImages />} />
+        <Route path="/browseImages" element={<BrowseImages />} />  
       </Routes>
     </Router>
     </Container>

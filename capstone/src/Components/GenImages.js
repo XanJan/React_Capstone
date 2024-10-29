@@ -2,8 +2,20 @@ import React from "react";
 import Header from "./Header";
 import { List } from "reactstrap";
 import "./GenImages.css";
+
+import { useNavigate } from "react-router-dom";
 import Popup from "./PopupWindow.js"
+
+
 function GenImages() {
+
+    let navigate = useNavigate(); 
+    const routeChange = () => { 
+    let path = `/browseImages`;  // Ensure the path matches the route defined in App.js
+    navigate(path);
+}
+
+
     return (
         <div>
             <Header />
@@ -68,7 +80,11 @@ function GenImages() {
 
             <div className="furniture-options">
                 <button>Click me</button>
-                <Popup trigger={true}/>
+                
+            </div>
+            <div className="next-page">
+                <button onClick={routeChange}>
+                    Next Page</button>
             </div>
 
         </div>
