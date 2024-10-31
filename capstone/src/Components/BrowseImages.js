@@ -6,7 +6,7 @@ import { GoTriangleLeft } from "react-icons/go";
 import { FiRotateCcw } from "react-icons/fi";
 import { FaRegCircle } from "react-icons/fa";
 
-const images = require.context('../images', true);
+const images = require.context('../images/images_browsepage', true);
 const imageList = images.keys().map(image => images(image)); // Map image paths
 
 

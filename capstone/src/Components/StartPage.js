@@ -7,7 +7,7 @@ import { FaPlus } from "react-icons/fa6";
 import { FaRegCircle } from "react-icons/fa";
 
 // Import images using require.context
-const images = require.context('../images', true);
+const images = require.context('../images/images_startpage', true);
 const imageList = images.keys().map(image => images(image)); // Map image paths
 
 
@@ -25,6 +25,7 @@ function StartPage() {
     return (
         <div>
         <Header />
+        
         <div className="grid">
             {imageList.map((image, index) => (
                 // Some Webpack configurations require .default, some don't. Try without first.

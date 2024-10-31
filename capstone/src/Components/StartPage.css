@@ -28,7 +28,7 @@
   
   /* Add a hover effect for interactivity */
   .grid-item:hover {
-    transform: scale(1.05); /* Scale up the image slightly on hover */
+    transform: scale(1.01); /* Scale up the image slightly on hover */
   }
   
   .start-button{
