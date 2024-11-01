@@ -78,10 +78,7 @@ function GenImages() {
                 </div>
             </div>
 
-            <div className="furniture-options">
-                <button>Click me</button>
-                
-            </div>
+
             <div className="next-page">
                 <button onClick={routeChange}>
                     Next Page</button>
